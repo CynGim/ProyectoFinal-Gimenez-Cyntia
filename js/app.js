@@ -12,7 +12,7 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const getProducts = async () => {
     const response = await fetch("/data.json");
-    const data = await response.json();
+    const data = await response.json("imagen");
     console.log(data);
 
     data.forEach((product)=> {
