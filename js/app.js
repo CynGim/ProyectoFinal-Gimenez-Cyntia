@@ -12,16 +12,16 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const getProducts = async () => {
     const response = await fetch("/data.json");
-    const data = await response.json("data");
+    const data = await response.json("");
     console.log(data);
 
-    data.forEach((product)=> {
+    data.forEach((data)=> {
         let content = document.createElement("div");
         content.className = "card";
         content.innerHTML = `
-        <img src="${product.imagen}">
-        <h3>${product.nombre}</h3>
-        <p class="price">€${product.precio}</p></div>
+        <img src="${data.imagen}">
+        <h3>${data.nombre}</h3>
+        <p class="price">€${data.precio}</p></div>
         `;
     
         shopContent.append(content);
