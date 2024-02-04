@@ -15,7 +15,7 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     console.log(data);*/
     
     const getProducts = async () => {
-    const response = await fetch("/data.json");
+    const response = await fetch("/datos/data.json");
     const data = await response.json("");
     console.log(data);
     
