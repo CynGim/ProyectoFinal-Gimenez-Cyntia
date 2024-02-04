@@ -2,21 +2,21 @@
     {
         "id": "1",
         "nombre": "Head Prestige",
-        "imagen": "./img/img1.png",
+        "imagen": "./img/head2.webp",
         "precio": 199,
         "cantidad":1
     },
     {
         "id": "2",
         "nombre": "Head Radical",
-        "imagen": "./img/img2.png",
+        "imagen": "./img/head5.webp",
         "precio": 149,
         "cantidad": 1
     },
     {
         "id": "3",
         "nombre": "Head Radical Pro",
-        "imagen": "./img/img3.png",
+        "imagen": "./img/head6.webp",
         "precio": 203,
         "cantidad":1
     },
