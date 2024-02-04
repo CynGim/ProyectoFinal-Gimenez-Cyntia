@@ -9,19 +9,23 @@ const cantidadCarrito = document.getElementById("cantidadCarrito");
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 //funcion asincrona de asyncawait mediante fetch mencionando la ruta de los productos de data.json generando promesas
-
-const getProducts = async () => {
+/*const getProducts = async () => {
+    const response = await fetch("/data.json");
+    const data = await response.json("");
+    console.log(data);*/
+    
+    const getProducts = async () => {
     const response = await fetch("/data.json");
     const data = await response.json("");
     console.log(data);
-
-    data.forEach((data)=> {
+    
+    data.forEach((product)=> {
         let content = document.createElement("div");
         content.className = "card";
         content.innerHTML = `
-        <img src="${data.imagen}">
-        <h3>${data.nombre}</h3>
-        <p class="price">€${data.precio}</p></div>
+        <img src="${product.imagen}">
+        <h3>${product.nombre}</h3>
+        <p class="price">€${product.precio}</p></div>
         `;
     
         shopContent.append(content);
