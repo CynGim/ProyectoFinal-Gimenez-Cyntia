@@ -31,7 +31,7 @@ body {
     cursor: pointer;
   }
   
-  /*Banner*/
+
   .banner {
     background-size: cover;
     background-position: center;
@@ -60,7 +60,7 @@ body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   }
   
-  /*product cards*/
+  
   .shop-content {
     display: flex;
     justify-content: space-around;
@@ -161,100 +161,6 @@ body {
     padding-top: 20px;
   }
 
-  .copyright{
-    display: flex;
-    text-align: center;
-    font-size: 14pt;
-    justify-content: center;
-   color: black;
-    font-weight: 800;
-    padding-top: 1px; 
-}
-
-.container-footer{
-    max-width: 100%;
-}
-.row{
-    display: flex;
-    flex-wrap: wrap;
-}
-.container-footer ul{
-    list-style: none;
-    padding: 5px 0;
-}
-.footer{
-    background: rgba(0, 0, 0, 0.171);
-    margin: auto;
-}
-.footer-col{
-    width: 30%;
-    padding: 0 15px;
-    font-weight: 600;
-}
-
-.footer-col h4{
-    font-family: 'Cormorant Garamond', serif;
-    color: black;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-    font-weight: 600;
-    position: relative;
-}
-
-.footer-col h4::before{
-    content: '';
-    position: absolute;
-    left: 20;
-    bottom: -10px;
-    background: black;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-    font-family: 'Cormorant Garamond', serif;
-}
-
-.footer-col ul li:not(:last-child) {
-    margin-bottom: 10px;
-}
-
-.footer-col ul li a {
-    font-size: 16px;
-    text-transform: capitalize;
-    color: black;
-    font-weight: 300;
-    color: black;
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    transition: all 0.3s ease;
-}
-
-.footer-col ul li a:hover{
-    color: bisque;
-    padding-left: 8px;
-}
-
-.footer-col .social-links a{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: bisque;
-    margin: 0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: black;
-    transition: all 0.5 ease;
-}
-.social-icon{
-    width: 50px;
-    height: 50px;
-}
-
-.footer-col .social-links a:hover{
-    color:black;
-    background-color: darkgrey;
-}
-  
   /*mobile*/
   
   @media only screen and (max-width: 750px) {

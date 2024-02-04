@@ -14,10 +14,20 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     const data = await response.json("");
     console.log(data);*/
     
-    const getProducts = async () => {
+    /*const getProducts = async () => {
     const response = await fetch("../data/datos.json");
     const data = await response.json("");
     console.log(data);
+
+    fetch("../data/datos.json")
+    .then(response => response.json())
+    .then(datos => {
+        let shopContent = document.getElementById("shop-content");
+        datos.forEach((item) => {
+            let div = document.createElement("div");
+            
+        })
+        });
     
     data.forEach((product)=> {
         let content = document.createElement("div");
@@ -64,6 +74,59 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
         }
        }); 
     });
+};*/
+
+const getProducts = async () => {
+    fetch("data/datos.json")
+        .then(response => response.json())
+        .then(data => {
+
+            data.forEach((product) => {
+                let content = document.createElement("div");
+                content.className = "card";
+                content.innerHTML = `
+         <img src="${product.imagen}">
+         <h3>${product.nombre}</h3>
+         <p class="price">$${product.precio}</p></div>
+         `;
+
+                shopContent.append(content);
+
+                let comprar = document.createElement("button");
+                comprar.innerText = "Agregar al carrito";
+                comprar.className = "Agregar al carrito";
+
+                content.append(comprar);
+
+                //creo evento para detectar accion (agregando objetos al carrito) y aplico funcion para que detecte los productos que se repiten mediante some devolviendo valor true o false
+
+                comprar.addEventListener("click", () => {
+                    const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
+
+                    //creo condicion sumando la cantidad si el producto es igual
+                    if (repeat) {
+                        carrito.map((prod) => {
+                            if (prod.id === product.id) {
+                                prod.cantidad++;
+                            }
+                        });
+
+                    } else {
+                        carrito.push({
+                            id: product.id,
+                            imagen: product.imagen,
+                            nombre: product.nombre,
+                            precio: product.precio,
+                            cantidad: product.cantidad,
+                        });
+                        console.log(carrito);
+                        console.log(carrito.length);
+                        carritoCounter();
+                        saveLocal();
+                    }
+                });
+            });
+        });
 };
 
 getProducts();
