@@ -200,19 +200,6 @@ body {
     cursor: pointer;
   }
   
-  
-  .cantidad-carrito {
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    font-size: 12px;
-    padding: 4px;
-    top: 37px;
-    right: 14px;
-    position: absolute;
-    display: none;
-  }
-  
   .sumar {
     cursor: pointer;
   }
